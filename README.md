@@ -1,4 +1,4 @@
-<img src="https://github.com/foodcloud/bonobo/blob/master/public/images/bonobo.png">
+<img src="https://github.com/foodcloud/bonobo/blob/master/public/images/bonobo.png" height="100">
 
 # Bonobo
 
