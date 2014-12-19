@@ -1,0 +1,8 @@
+application.name=FoodCloud Lebensmittelspenden
+donation=Gespendet Sachen
+collectDate=Abholtermin
+startTime=Abhol ab
+endTime=Abhol bis
+weight=Gewicht(Kg)
+ew.donation=Neue Spende
+agree.to.conditions=Ich stimme den Allgemeinen Geschäftsbedingungen zu

@@ -1,0 +1,48 @@
+@main(Messages("application.name")) {
+
+<script type="text/javascript">
+  $(document).ready(function() {
+    $('#donation_table').dataTable({
+    "bProcessing": true,
+    "aaSorting": [[ 0, "asc" ]],
+    "bServerSide": false,
+    "bJQueryUI": true,
+    "sPaginationType": "full_numbers",
+    "sAjaxSource": "@routes.Application.listDonations()"
+    });
+  });
+</script>
+
+  <img width="15%" height="15%" src='@routes.Assets.at("images/Logo-Horizontal1.png")'>
+    <h2>Manage my Donations</h2>
+    <h3><i>For:</i> <a href="@routes.Application.showDonors">Tesco Ireland, Ltd.</a></h3>
+    @helper.form(routes.Application.create, 'style -> "float: left;") {
+        <input type="submit" value="Post a Donation" class="new-donation-button" />
+    }
+    <h4>&nbsp;</h4>
+    <table id="donation_table" class="display table table-striped table-bordered table-hover">
+        <colgroup>
+        <col width="10%">
+        <col width="50%">
+        <col width="20%">
+        <col width="10%">
+        <col width="8%" align="right">
+        <col width="6%">
+        <col width="10%">
+        </colgroup>
+        <thead>
+       <tr>
+         <th>Date Posted</th>
+         <th>Donation</th>
+         <th>Location</th>
+         <th>Collection Date/Time</th>
+         <th>Weight (Kg)</th>
+         <th>Status</th>
+         <th>Accepting Charity</th>
+       </tr>
+      </thead>
+      <tbody>
+      </tbody>
+    </table>
+
+}

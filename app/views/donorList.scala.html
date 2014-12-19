@@ -1,0 +1,37 @@
+@main(Messages("application.name")) {
+
+    <script type="text/javascript">
+    $ ( document ).ready ( function ( ) {
+    $ ( '#donor_table' ).dataTable ( {
+    "bProcessing" : true,
+    "aaSorting" :[[ 0, "asc" ] ],
+    "bServerSide" : false,
+    "bJQueryUI" : true,
+    "sPaginationType" : "full_numbers",
+    "sAjaxSource" : "@routes.Application.listDonors()"
+    } ) ;
+    } ) ;
+    </script>
+
+    <img width="15%" height="15%" src='@routes.Assets.at("images/Logo-Horizontal1.png")'>
+    <h2>Registered Donors</h2>
+
+    <h4>&nbsp;</h4>
+    <table id="donor_table" class="display table table-striped table-bordered table-hover">
+        <thead>
+            <tr>
+                <th>Business Name</th>
+                <th>Location</th>
+                <th>Type of Business</th>
+                <th>Frequency</th>
+                <th>Collection Time</th>
+                <th>Contact Name</th>
+                <th>Contact Phone</th>
+                <th>Company ID</th>
+            </tr>
+        </thead>
+        <tbody>
+        </tbody>
+    </table>
+
+}

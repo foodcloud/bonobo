@@ -1,0 +1,67 @@
+h1 {
+    color: #ffffff;
+    font-family: Myriad, Helvetica, Tahoma, Arial, clean, sans-serif;
+    font-weight: bold;
+    text-shadow: 2px 2px 2px grey;
+}
+
+h2 {
+    color: #ffffff;
+    font-family: Arial,Helvetica,sans-serif;
+    font-weight: bold;
+    text-shadow: 2px 2px 2px grey;
+}
+h3 {
+    color: #ffffff;
+    font-family: Arial,Helvetica,sans-serif;
+    font-weight: normal;
+}
+
+table, th, td {
+    border-collapse: collapse;
+}
+
+th {
+    background-color: #9ad0ff;
+    color: #ffffff;
+    font-family: Arial,Helvetica,sans-serif;
+    font-weight: bold;
+    padding-right: 8px;
+}
+
+tr {
+    border: solid;
+    border-width: 1px 0;
+    border-color: #ffffff;
+    background-color: rgba(154, 208, 255, 0.50);
+    color: #1d1774;
+    font-family: Arial,Helvetica,sans-serif;
+    font:40px/1;
+}
+
+td.abbrv {
+    text-align: center;
+}
+
+a:link {
+    color: white;
+}
+
+.new-donation-button {
+    color: midnightblue;
+    font-family: Arial,Helvetica,sans-serif;
+    font-weight: normal;
+    font-size: large;
+/*    height: 34px;
+    width: 180px;
+    background-image: url(../images/add.png);
+    background-repeat: no-repeat;
+    background-position: 2px 2px;
+    text-align: right;  */
+}
+/* unvisited link */
+a:visited {
+    color: #852957;
+}
+
+/* visited link */

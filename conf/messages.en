@@ -1,0 +1,9 @@
+application.name=FoodCloud Donations
+donation=Donation
+collectDate=Collection Date
+startTime=From Time
+endTime=To Time
+weight=Weight (Kg)
+new.donation=New Donation
+manage.my.donations=Manage My Donations
+agree.to.conditions=I agree to the terms and conditions

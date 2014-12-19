@@ -1,0 +1,19 @@
+# Routes
+# This file defines all application routes (Higher priority routes first)
+# ~~~~
+
+GET         /                     controllers.Application.index
+GET         /donor                controllers.Application.index
+GET         /donors               controllers.Application.showDonors
+GET         /newDonor             controllers.Application.registerDonor
+POST        /addDonor             controllers.Application.addDonor
+GET         /listDonations        controllers.Application.listDonations
+GET         /listDonors           controllers.Application.listDonors
+POST        /addDonation          controllers.Application.addDonation
+GET         /create               controllers.Application.create
+
+# Map static resources from the /public folder to the /assets URL path
+GET         /assets/*file         controllers.Assets.at(path="/public", file)
+
+
+

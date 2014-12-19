@@ -1,0 +1,51 @@
+@(message: String, f : Form[model.Donor])
+
+@import helper._
+@import helper.twitterBootstrap._
+
+
+@implicitFieldConstructor = @{ FieldConstructor(simpleInput.f) }
+
+@import model.BusinessType
+@import model.CollectionTime
+@import model.Availability
+
+@main(message) {
+    <h1><img width="5%" height="5%" src='@routes.Assets.at("images/foodcloud_logo_white.png")'>&nbsp;&nbsp;@message</h1>
+    <fieldset style="width: 500px;" >
+    @helper.form(routes.Application.addDonor, 'class -> "form") {
+        @inputText(f("name"), '_label -> "Company Name")
+        @inputText(f("location"), '_label -> "Location")
+        @select(f("frequency"), options = Seq(
+            (CollectionTime.Daily.toString,"Daily"),
+            (CollectionTime.Weekly.toString,"Weekly"),
+            (CollectionTime.Adhoc.toString, "Ad-hoc")
+        ), '_label -> "Availability/Frequency", '_default -> "Daily" )
+        @select(f("collectionTime"), options = Seq(
+            (Availability.Morning.toString,"Morning"),
+            (Availability.Evening.toString,"Evening"),
+            (Availability.Anytime.toString,"Anytime")
+        ), '_label -> "Collection Time", '_default -> "Morning" )
+        @select(f("typeOfBusiness"), options = Seq(
+            (BusinessType.Restaurant.toString,"Restaurant"),
+            (BusinessType.Cafe.toString,"Cafe"),
+            (BusinessType.Bakery.toString,"Bakery"),
+            (BusinessType.Caterer.toString,"Catering Company"),
+            (BusinessType.Hotel.toString,"Hotel"),
+            (BusinessType.FruitVegShop.toString,"Fruit & Veg Shop"),
+            (BusinessType.ConvenienceShop.toString,"Convenience Shop"),
+            (BusinessType.Supermarket.toString,"Supermarket"),
+            (BusinessType.NonRetail.toString,"Other non-retail organisation")
+        ), '_label -> "Type of Business", '_default -> "Supermarket" )
+        @inputText(f("contactName"), '_label -> "Contact Name")
+        @phoneFieldInput(f("contactPhone"), '_label -> "Contact Phone")
+        @inputText(f("companyId"), '_label -> "Company ID")
+        <fieldset style="margin-top: 10px;">
+            <input type="radio" id="r1"/><label class="radio-label" for="r1">I agree to the <a href='@routes.Assets.at("business-agreement.html")'>terms and conditions</a></label><br/>
+            <input type="submit" value="Register" />
+            <a href="@routes.Application.index" class="cancel">Cancel</a>
+        </fieldset>
+    }
+    </fieldset>
+
+}

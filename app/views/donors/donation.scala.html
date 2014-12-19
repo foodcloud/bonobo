@@ -1,0 +1,28 @@
+@(message: String, f : Form[DonationHolder])
+
+@import helper._
+@import helper.twitterBootstrap._
+
+
+@implicitFieldConstructor = @{ FieldConstructor(simpleInput.f) }
+
+@main(message) {
+
+    <h1><img width="5%" height="5%" src='@routes.Assets.at("images/foodcloud_logo_white.png")'>&nbsp;&nbsp;@message</h1>
+    <fieldset style="width: 500px;" >
+    @helper.form(routes.Application.addDonation, 'class -> "form") {
+        @textarea(f("donation"), args = 'rows -> 3, 'cols -> 50)
+        @inputText(f("location"), '_label -> "Location")
+        @dateFieldInput(f("collectDate"), '_label -> "Collect date")
+        @timeFieldInput(f("startTime"), '_label -> "Start Time")
+        @timeFieldInput(f("endTime"), '_label -> "End Time")
+        @inputNumber(f("weight"), '_label -> "Weight", 'size -> 6)
+        <fieldset style="margin-top: 10px;">
+            <input type="radio" id="r1"/><label class="radio-label" for="r1">I agree to the terms and conditions</label><br/>
+            <input type="submit" value="Donate" />
+            <a href="@routes.Application.index" class="cancel">Cancel</a>
+        </fieldset>
+    }
+    </fieldset>
+
+}
