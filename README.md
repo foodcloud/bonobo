@@ -1,4 +1,4 @@
-<img src="https://github.com/foodcloud/bonobo/blob/master/public/images/bonobo.png" align="left" height="48" width="48"><h1>Bonobo</h1>
+<img src="https://github.com/foodcloud/bonobo/blob/master/public/images/bonobo.png" align="left" height="48"><h1>Bonobo</h1>
 
 ## Platform supporting food-sharing programmes
 
